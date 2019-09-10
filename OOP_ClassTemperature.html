@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    //tao class
+    let temperature =   function (c) {
+        this.c = c;
+        this.getC = function () {
+            return c;
+        }
+        this.getC_convet_F  =function(){
+            return (c *1.8) +32;
+        }
+        this.getC_convet_K  =function(){
+            return c +275.15;
+        }
+
+    }
+    //tạo đối tượng
+    let Convert = new temperature(25);
+    let doF = Convert.getC_convet_F();
+    let doK =Convert.getC_convet_K();
+    document.write("Độ C ra độ  F :"+doF+"<br/>");
+    document.write("Độ C ra dộ  K :"+ doK);
+
+</script>
+</body>
+</html>
